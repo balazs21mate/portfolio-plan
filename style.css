@@ -35,15 +35,16 @@ body {
   color: #fff;
 }
 .hero {
+  height: 100%;
+  padding: 2.4rem;
+
   display: flex;
   flex-direction: column;
-  gap: 4.8rem;
+  justify-content: space-between;
 }
 
 /* NAVIGATION */
 .navigation {
-  padding: 2.4rem;
-
   display: flex;
   justify-content: space-between;
 }
@@ -83,7 +84,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 6.4rem;
+  gap: 3.2rem;
 }
 .hero-content {
   margin: 0 auto;
@@ -91,11 +92,11 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.6rem;
 }
 
 .name {
-  font-size: 6.2rem;
+  font-size: 5.2rem;
   font-weight: 700;
 
   animation-name: profile;
@@ -106,7 +107,7 @@ body {
 }
 
 .work {
-  font-size: 5.2rem;
+  font-size: 3rem;
   line-height: 1.2;
 
   animation-name: left-to-center;
@@ -122,12 +123,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
-
-  animation-name: right-to-center;
-  animation-delay: 1s;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
 }
 
 .button:link,
@@ -137,13 +132,19 @@ body {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation-name: right-to-center;
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
 }
 
 .button--full {
@@ -176,7 +177,7 @@ body {
     transform: translateX(-100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -185,6 +186,6 @@ body {
     transform: translateX(100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
