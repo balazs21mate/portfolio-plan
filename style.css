@@ -8,6 +8,7 @@
 - Colors
     primary: #1c7ed6
     primary-hover: #1864ab
+    text: rgb(52,58,64)
 */
 
 *,
@@ -45,8 +46,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
+/* *************** */
 /* NAVIGATION */
+/* *************** */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -66,8 +68,9 @@ body {
   width: 2.4rem;
   cursor: pointer;
 }
-
+/* *************** */
 /* CONTENT */
+/* *************** */
 .image-box {
   width: 100%;
   text-align: center;
@@ -115,8 +118,9 @@ body {
   font-size: 3rem;
   line-height: 1.2;
 }
-
+/* *************** */
 /* BUTTONS */
+/* *************** */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -131,8 +135,7 @@ body {
 }
 
 .button:link,
-.button:visited,
-.button:active {
+.button:visited {
   width: 25rem;
   text-align: center;
   text-decoration: none;
@@ -141,28 +144,36 @@ body {
   font-weight: 500;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
+  transition: all 0.3s;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.button--full {
+.button--full:link,
+.button--full:visited {
   background-color: #1c7ed6;
 }
 
-.button--full:hover {
+.button--full:hover,
+.button--full:active {
   background-color: #1864ab;
 }
-.button--outline {
-  border: none;
-}
-.button--outline:hover {
+.button--outline:link,
+.button--outline:visited {
   box-shadow: inset 0 0 0 1px #fff;
+  background-color: #000;
+  color: #fff;
 }
-
+.button--outline:hover,
+.button--outline:active {
+  background-color: #fff;
+  color: rgb(52, 58, 64);
+}
+/* *************** */
 /* HERO ANIMATION */
-
+/* *************** */
 @keyframes profile {
   from {
     opacity: 0;
