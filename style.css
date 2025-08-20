@@ -28,28 +28,20 @@ body {
   font-weight: 400;
 }
 
-/*-------------- HERO SECTION -----------------*/
-
-.hero-section {
-  background-color: #000;
-  height: 100svh;
-  color: #fff;
-
-  /* Az animáció alatt ne húzza szét a képernyőt */
-  overflow-x: hidden;
-}
-.hero {
-  height: 100%;
-  padding: 2.4rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 /* *************** */
 /* NAVIGATION */
 /* *************** */
+.nav-container {
+  background-color: #000;
+  height: 6.4rem;
+  color: #fff;
+  padding: 0 2.4rem;
+
+  display: flex;
+  align-items: center;
+}
 .navigation {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -68,6 +60,28 @@ body {
   width: 2.4rem;
   cursor: pointer;
 }
+
+/*-------------- HERO SECTION -----------------*/
+
+.hero-section {
+  background-color: #000;
+  height: calc(100svh - 6.4rem);
+  color: #fff;
+  padding: 0 2.4rem;
+
+  /* Az animáció alatt ne húzza szét a képernyőt */
+  overflow-x: hidden;
+}
+.hero {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+
+  row-gap: 6.4rem;
+}
+
 /* *************** */
 /* CONTENT */
 /* *************** */
@@ -76,7 +90,7 @@ body {
   text-align: center;
 }
 .image {
-  width: 50%;
+  width: 80%;
   /* border-radius: 1.2rem; */
   border-left: 5px solid #1c7ed6;
   border-top: 5px solid #1c7ed6;
